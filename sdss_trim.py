@@ -14,7 +14,7 @@ sys.path.append(home+'git/Python/user_modules/')
 mag_col = ['modelMag_u', 'modelMag_g', 'modelMag_r', 'modelMag_i', 'modelMag_z']
 ext_col = ['extinction_u', 'extinction_g', 'extinction_r', 'extinction_i', 'extinction_z']
 
-cat = Table.read('/Users/roz18/Documents/Data/mini-projects/DESCQA-Color-Test/SpecPhoto20161107.fit')
+cat = Table.read('/Users/roz18/Documents/Data/DESCQA-Color-Test/SpecPhoto20161107.fit')
 print(len(cat))
 
 # # Keep objects with valid photometry
@@ -43,4 +43,4 @@ cat.remove_columns(['extinction_u', 'extinction_g', 'extinction_r', 'extinction_
 # Fill masked value
 cat = cat.filled(-99)
 
-cat.write('/Users/roz18/Documents/Data/mini-projects/DESCQA-Color-Test/SpecPhoto_sdss_mgs_extinction_corrected.fits')
+cat.write('/Users/roz18/Documents/Data/DESCQA-Color-Test/SpecPhoto_sdss_mgs_extinction_corrected.fits')
