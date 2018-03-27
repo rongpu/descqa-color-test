@@ -1,0 +1,298 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9552,        290]
+NotebookOptionsPosition[      8995,        265]
+NotebookOutlinePosition[      9351,        281]
+CellTagsIndexPosition[      9308,        278]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"DES", "-", 
+    RowBox[{"SDSS", " ", "transformation"}]}], "*)"}], "\[IndentingNewLine]", 
+  
+  RowBox[{
+   RowBox[{
+    RowBox[{"eqns", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"gdes", "==", 
+        RowBox[{
+         RowBox[{"gsdss", "\[Minus]", 
+          RowBox[{"0.104", "\[Times]", 
+           RowBox[{"(", 
+            RowBox[{"gsdss", "\[Minus]", "rsdss"}], ")"}]}]}], "+", 
+         "0.01"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"rdes", "==", 
+        RowBox[{
+         RowBox[{"rsdss", "\[Minus]", 
+          RowBox[{"0.102", "\[Times]", 
+           RowBox[{"(", 
+            RowBox[{"gsdss", "\[Minus]", "rsdss"}], ")"}]}]}], "+", 
+         "0.02"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"ides", "==", 
+        RowBox[{
+         RowBox[{"isdss", "\[Minus]", 
+          RowBox[{"0.256", "\[Times]", 
+           RowBox[{"(", 
+            RowBox[{"isdss", "\[Minus]", "zsdss"}], ")"}]}]}], "+", 
+         "0.02"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"zdes", "==", 
+        RowBox[{
+         RowBox[{"zsdss", "\[Minus]", 
+          RowBox[{"0.086", "\[Times]", 
+           RowBox[{"(", 
+            RowBox[{"isdss", "\[Minus]", "zsdss"}], ")"}]}]}], "+", 
+         "0.01"}]}]}], "}"}]}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"Solve", "[", 
+    RowBox[{"eqns", ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "gsdss", ",", " ", "rsdss", ",", " ", "isdss", ",", " ", "zsdss"}], 
+      "}"}]}], "]"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.729098298095933*^9, 3.729098333839529*^9}, {
+  3.729098425814295*^9, 3.7290985212634983`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"gsdss", "\[Rule]", 
+     RowBox[{
+      RowBox[{"-", "0.008957915831663325`"}], "+", 
+      RowBox[{"1.1042084168336672`", " ", "gdes"}], "-", 
+      RowBox[{"0.10420841683366731`", " ", "rdes"}]}]}], ",", 
+    RowBox[{"rsdss", "\[Rule]", 
+     RowBox[{
+      RowBox[{"-", "0.018977955911823635`"}], "+", 
+      RowBox[{"0.10220440881763437`", " ", "gdes"}], "+", 
+      RowBox[{"0.8977955911823647`", " ", "rdes"}]}]}], ",", 
+    RowBox[{"isdss", "\[Rule]", 
+     RowBox[{
+      RowBox[{"-", "0.02308433734939759`"}], "+", 
+      RowBox[{"1.308433734939759`", " ", "ides"}], "-", 
+      RowBox[{"0.308433734939759`", " ", "zdes"}]}]}], ",", 
+    RowBox[{"zsdss", "\[Rule]", 
+     RowBox[{
+      RowBox[{"-", "0.011036144578313256`"}], "+", 
+      RowBox[{"0.10361445783132517`", " ", "ides"}], "+", 
+      RowBox[{"0.8963855421686746`", " ", "zdes"}]}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.7290984387261047`*^9, 3.72909848935413*^9, 
+  3.729098624113804*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"DES", "-", 
+    RowBox[{"CFHT", " ", "transformation"}]}], "*)"}], "\[IndentingNewLine]", 
+  
+  RowBox[{
+   RowBox[{
+    RowBox[{"eqns", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"gdes", "\[Equal]", 
+        RowBox[{"gCFHT", "+", 
+         RowBox[{"0.062", 
+          RowBox[{"(", 
+           RowBox[{"gCFHT", "\[Minus]", "rCFHT"}], ")"}]}], "+", "0.058"}]}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"rdes", "==", 
+        RowBox[{
+         RowBox[{"rCFHT", "\[Minus]", 
+          RowBox[{"0.078", 
+           RowBox[{"(", 
+            RowBox[{"gCFHT", "\[Minus]", "rCFHT"}], ")"}]}]}], "+", 
+         "0.021"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"ides", "==", 
+        RowBox[{
+         RowBox[{"iCFHT", "\[Minus]", 
+          RowBox[{"0.179", 
+           RowBox[{"(", 
+            RowBox[{"iCFHT", "\[Minus]", "zCFHT"}], ")"}]}]}], "+", 
+         "0.062"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"zdes", "==", 
+        RowBox[{
+         RowBox[{"zCFHT", "\[Minus]", 
+          RowBox[{"0.139", 
+           RowBox[{"(", 
+            RowBox[{"iCFHT", "\[Minus]", "zCFHT"}], ")"}]}]}], "+", 
+         "0.053"}]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Solve", "[", 
+    RowBox[{"eqns", ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "gCFHT", ",", " ", "rCFHT", ",", " ", "iCFHT", ",", " ", "zCFHT"}], 
+      "}"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.729098467390264*^9, 3.729098598761857*^9}, 
+   3.729098634504117*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"gCFHT", "\[Rule]", 
+     RowBox[{
+      RowBox[{"-", "0.05598771929824562`"}], "+", 
+      RowBox[{"0.9456140350877194`", " ", "gdes"}], "+", 
+      RowBox[{"0.0543859649122807`", " ", "rdes"}]}]}], ",", 
+    RowBox[{"rCFHT", "\[Rule]", 
+     RowBox[{
+      RowBox[{"-", "0.02353157894736846`"}], "+", 
+      RowBox[{"0.0684210526315816`", " ", "gdes"}], "+", 
+      RowBox[{"0.931578947368421`", " ", "rdes"}]}]}], ",", 
+    RowBox[{"iCFHT", "\[Rule]", 
+     RowBox[{
+      RowBox[{"-", "0.06367812500000002`"}], "+", 
+      RowBox[{"1.1864583333333334`", " ", "ides"}], "-", 
+      RowBox[{"0.18645833333333334`", " ", "zdes"}]}]}], ",", 
+    RowBox[{"zCFHT", "\[Rule]", 
+     RowBox[{
+      RowBox[{"-", "0.0543031249999999`"}], "+", 
+      RowBox[{"0.14479166666666643`", " ", "ides"}], "+", 
+      RowBox[{"0.8552083333333333`", " ", "zdes"}]}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.7290985497421093`*^9, 3.729098588250329*^9}, 
+   3.729098637015704*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"CFHT", 
+     RowBox[{"(", "MegaCam", ")"}]}], "-", 
+    RowBox[{"SDSS", " ", "transformation"}]}], "*)"}], "\[IndentingNewLine]", 
+  
+  RowBox[{
+   RowBox[{
+    RowBox[{"eqns", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"uMega", "\[Equal]", 
+        RowBox[{"uSDSS", "-", 
+         RowBox[{"0.241", " ", 
+          RowBox[{"(", 
+           RowBox[{"uSDSS", "-", "gSDSS"}], ")"}]}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"gMega", "\[Equal]", 
+        RowBox[{"gSDSS", "-", 
+         RowBox[{"0.153", " ", 
+          RowBox[{"(", 
+           RowBox[{"gSDSS", "-", "rSDSS"}], ")"}]}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"rMega", "\[Equal]", 
+        RowBox[{"rSDSS", "-", 
+         RowBox[{"0.024", " ", 
+          RowBox[{"(", 
+           RowBox[{"gSDSS", "-", "rSDSS"}], ")"}]}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"iMega", "\[Equal]", 
+        RowBox[{"iSDSS", "-", 
+         RowBox[{"0.085", " ", 
+          RowBox[{"(", 
+           RowBox[{"rSDSS", "-", "iSDSS"}], ")"}]}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"zMega", "\[Equal]", 
+        RowBox[{"zSDSS", "+", 
+         RowBox[{"0.074", " ", 
+          RowBox[{"(", 
+           RowBox[{"iSDSS", "-", "zSDSS"}], ")"}]}]}]}]}], "}"}]}], ";"}], 
+   "\n", 
+   RowBox[{"Solve", "[", 
+    RowBox[{"eqns", ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+      "uSDSS", ",", " ", "gSDSS", ",", " ", "rSDSS", ",", " ", "iSDSS", ",", 
+       " ", "zSDSS"}], "}"}]}], "]"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.729099466278597*^9, 3.7290995232095823`*^9}, {
+  3.7290995789929113`*^9, 3.729099638639893*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"uSDSS", "\[Rule]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "0.3732992078222448`"}], " ", "gMega"}], "+", 
+      RowBox[{"0.05577615116875337`", " ", "rMega"}], "+", 
+      RowBox[{"1.3175230566534915`", " ", "uMega"}]}]}], ",", 
+    RowBox[{"gSDSS", "\[Rule]", 
+     RowBox[{
+      RowBox[{"1.1756601607347876`", " ", "gMega"}], "-", 
+      RowBox[{"0.17566016073478757`", " ", "rMega"}]}]}], ",", 
+    RowBox[{"rSDSS", "\[Rule]", 
+     RowBox[{
+      RowBox[{"0.027554535017221583`", " ", "gMega"}], "+", 
+      RowBox[{"0.9724454649827784`", " ", "rMega"}]}]}], ",", 
+    RowBox[{"iSDSS", "\[Rule]", 
+     RowBox[{
+      RowBox[{"0.0021586502087224285`", " ", "gMega"}], "+", 
+      RowBox[{"0.9216589861751152`", " ", "iMega"}], "+", 
+      RowBox[{"0.07618236361616237`", " ", "rMega"}]}]}], ",", 
+    RowBox[{"zSDSS", "\[Rule]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "0.00017250552423915736`"}], " ", "gMega"}], "-", 
+      RowBox[{"0.073653093927601`", " ", "iMega"}], "-", 
+      RowBox[{"0.006088007459606928`", " ", "rMega"}], "+", 
+      RowBox[{"1.079913606911447`", " ", "zMega"}]}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.729099625229672*^9, 3.729099639257806*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 655},
+WindowMargins->{{Automatic, 204}, {32, Automatic}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 11, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1670, 46, 148, "Input"],
+Cell[2253, 70, 1046, 26, 80, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3336, 101, 1541, 45, 114, "Input"],
+Cell[4880, 148, 1046, 26, 80, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5963, 179, 1728, 50, 148, "Input"],
+Cell[7694, 231, 1285, 31, 80, "Output"]
+}, Open  ]]
+}
+]
+*)
+

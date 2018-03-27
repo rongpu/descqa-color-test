@@ -1,0 +1,15 @@
+/* Query from SDSS DR13 */
+
+SELECT
+  specObjID, ra, dec, z, zerr, 
+  modelMag_u, modelMag_g, modelMag_r, modelMag_i, modelMag_z, 
+  modelMagErr_u, modelMagErr_g, modelMagErr_r, modelMagErr_i, modelMagErr_z, 
+  extinction_u, extinction_g, extinction_r, extinction_i, extinction_z, 
+  class, subClass, flags, legacy_target1
+  into mydb.SpecPhoto
+FROM SpecPhoto
+Where
+  survey='SDSS'
+  AND class='GALAXY'
+  AND z>0
+  AND zWarning=0

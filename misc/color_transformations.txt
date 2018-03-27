@@ -1,0 +1,20 @@
+# DES -> SDSS transformation
+gsdss = -0.00895792 + 1.10421 gdes - 0.104208 rdes
+rsdss = -0.018978 + 0.102204 gdes + 0.897796 rdes
+isdss = -0.0230843 + 1.30843 ides - 0.308434 zdes
+zsdss = -0.0110361 + 0.103614 ides + 0.896386 zdes
+
+
+# DES -> CFHT transformation
+gCFHT = -0.0559877 + 0.945614 gdes + 0.054386 rdes
+rCFHT = -0.0235316 + 0.0684211 gdes + 0.931579 rdes
+iCFHT = -0.0636781 + 1.18646 ides - 0.186458 zdes
+zCFHT = -0.0543031 + 0.144792 ides + 0.855208 zdes
+
+
+# CFHT (MegaCam) -> SDSS transformation
+uSDSS = -0.373299 gMega + 0.0557762 rMega + 1.31752 uMega
+gSDSS = 1.17566 gMega - 0.17566 rMega
+rSDSS = 0.0275545 gMega + 0.972445 rMega
+iSDSS = 0.00215865 gMega + 0.921659 iMega + 0.0761824 rMega
+zSDSS = -0.000172506 gMega - 0.0736531 iMega - 0.00608801 rMega + 1.07991 zMega 
